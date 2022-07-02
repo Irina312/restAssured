@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85c57a04-663b-4651-b085-4423b7d44880" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/StudentPractice/api_Activities.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/API_Day2/_02_LoginTypes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/workspaceRestAPI/E2E_Project.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/API_Testing/API_Day1/_01_introRestAssured.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/API_Testing/API_Day1/_01_introRestAssured.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/API_Testing/API_Day1/_01_introRestAssured.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/API_Testing/API_Day1/_01_introRestAssured.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,19 +36,20 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
-  <component name="RunManager" selected="TestNG.api_Activities.verifyContentTypeOption2">
-    <configuration name="_01_introRestAssured.verifyContentType" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.E2E_Project.verifyToken">
+    <configuration name="E2E_Project.verifyToken" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="restAssured" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="API_Testing.API_Day1.*" />
+          <option name="PATTERN" value="workspaceRestAPI.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="API_Testing.API_Day1" />
-      <option name="MAIN_CLASS_NAME" value="API_Testing.API_Day1._01_introRestAssured" />
-      <option name="METHOD_NAME" value="verifyContentType" />
+      <option name="PACKAGE_NAME" value="workspaceRestAPI" />
+      <option name="MAIN_CLASS_NAME" value="workspaceRestAPI.E2E_Project" />
+      <option name="METHOD_NAME" value="verifyToken" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -57,17 +57,53 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="api_Activities.verifyContentType" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="_02_LoginTypes.LoginWithMap" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="restAssured" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="StudentPractice.*" />
+          <option name="PATTERN" value="API_Day2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="StudentPractice" />
-      <option name="MAIN_CLASS_NAME" value="StudentPractice.api_Activities" />
-      <option name="METHOD_NAME" value="verifyContentType" />
+      <option name="PACKAGE_NAME" value="API_Testing.API_Day1" />
+      <option name="MAIN_CLASS_NAME" value="API_Day2._02_LoginTypes" />
+      <option name="METHOD_NAME" value="LoginWithMap" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="_02_LoginTypes.LoginWithQueryParam" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="restAssured" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="API_Day2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="API_Testing.API_Day1" />
+      <option name="MAIN_CLASS_NAME" value="API_Day2._02_LoginTypes" />
+      <option name="METHOD_NAME" value="LoginWithQueryParam" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="_02_LoginTypes.testUsingQueryParams" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="restAssured" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="API_Day2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="API_Testing.API_Day1" />
+      <option name="MAIN_CLASS_NAME" value="API_Day2._02_LoginTypes" />
+      <option name="METHOD_NAME" value="testUsingQueryParams" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -93,49 +129,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="api_Activities.verifyStatusCode" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="restAssured" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="StudentPractice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="StudentPractice" />
-      <option name="MAIN_CLASS_NAME" value="StudentPractice.api_Activities" />
-      <option name="METHOD_NAME" value="verifyStatusCode" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="api_Activities.verifyStatusCode12" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="restAssured" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="StudentPractice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="StudentPractice" />
-      <option name="MAIN_CLASS_NAME" value="StudentPractice.api_Activities" />
-      <option name="METHOD_NAME" value="verifyStatusCode12" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.E2E_Project.verifyToken" />
+        <item itemvalue="TestNG._02_LoginTypes.LoginWithQueryParam" />
+        <item itemvalue="TestNG._02_LoginTypes.LoginWithMap" />
+        <item itemvalue="TestNG._02_LoginTypes.testUsingQueryParams" />
         <item itemvalue="TestNG.api_Activities.verifyContentTypeOption2" />
-        <item itemvalue="TestNG.api_Activities.verifyStatusCode" />
-        <item itemvalue="TestNG.api_Activities.verifyStatusCode12" />
-        <item itemvalue="TestNG.api_Activities.verifyContentType" />
-        <item itemvalue="TestNG._01_introRestAssured.verifyContentType" />
       </list>
     </recent_temporary>
   </component>

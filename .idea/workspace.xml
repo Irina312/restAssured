@@ -5,20 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85c57a04-663b-4651-b085-4423b7d44880" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/StudentPractice/api_Activities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/API_Testing/API_Day1/_01_introRestAssured.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/API_Testing/API_Day1/_01_introRestAssured.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/API_Testing/API_Day1/_01_introRestAssured.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/API_Testing/API_Day1/_01_introRestAssured.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2BJfiDDXyYlD6EitUzsFxMP0VQI" />
   <component name="ProjectViewState">
@@ -28,6 +37,107 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="RunManager" selected="TestNG.api_Activities.verifyContentTypeOption2">
+    <configuration name="_01_introRestAssured.verifyContentType" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="restAssured" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="API_Testing.API_Day1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="API_Testing.API_Day1" />
+      <option name="MAIN_CLASS_NAME" value="API_Testing.API_Day1._01_introRestAssured" />
+      <option name="METHOD_NAME" value="verifyContentType" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="api_Activities.verifyContentType" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="restAssured" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="StudentPractice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="StudentPractice" />
+      <option name="MAIN_CLASS_NAME" value="StudentPractice.api_Activities" />
+      <option name="METHOD_NAME" value="verifyContentType" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="api_Activities.verifyContentTypeOption2" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="restAssured" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="StudentPractice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="StudentPractice" />
+      <option name="MAIN_CLASS_NAME" value="StudentPractice.api_Activities" />
+      <option name="METHOD_NAME" value="verifyContentTypeOption2" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="api_Activities.verifyStatusCode" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="restAssured" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="StudentPractice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="StudentPractice" />
+      <option name="MAIN_CLASS_NAME" value="StudentPractice.api_Activities" />
+      <option name="METHOD_NAME" value="verifyStatusCode" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="api_Activities.verifyStatusCode12" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="restAssured" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="StudentPractice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="StudentPractice" />
+      <option name="MAIN_CLASS_NAME" value="StudentPractice.api_Activities" />
+      <option name="METHOD_NAME" value="verifyStatusCode12" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.api_Activities.verifyContentTypeOption2" />
+        <item itemvalue="TestNG.api_Activities.verifyStatusCode" />
+        <item itemvalue="TestNG.api_Activities.verifyStatusCode12" />
+        <item itemvalue="TestNG.api_Activities.verifyContentType" />
+        <item itemvalue="TestNG._01_introRestAssured.verifyContentType" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -39,5 +149,16 @@
       <updated>1656629235118</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

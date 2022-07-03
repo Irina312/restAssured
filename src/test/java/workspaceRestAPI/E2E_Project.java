@@ -3,6 +3,7 @@ package workspaceRestAPI;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import org.checkerframework.checker.units.qual.A;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -55,7 +56,44 @@ public class E2E_Project {
         // The method verifies the Status Code
         Assert.assertEquals(SC_OK, response.statusCode());
         Assert.assertEquals("Default", response.jsonPath().getString("name[0]"));
-
-        // TODO: add test for ID, userID, & Description
     }
-}
+        // TODO: add test for ID, userID, & Description
+
+        @Test
+        public void verifyID() {
+            Response response = RestAssured.given()
+                    .header("Authorization", setupLoginAndToken())
+                    .when()
+                    .get(memberOf)
+                    .then()
+                    .log().all()
+                    .extract().response();
+            Assert.assertEquals("[]", response.jsonPath().getString("id[]"));
+        }
+
+        @Test
+        public void verifyUserID() {
+            Response response = RestAssured.given()
+                    .header("Authorization", setupLoginAndToken())
+                    .when()
+                    .get(memberOf)
+                    .then()
+                    .log().all()
+                    .extract().response();
+            Assert.assertEquals("[]", response.jsonPath().getString("userId[]"));
+        }
+        @Test
+        public void verifyDescription() {
+            Response response = RestAssured.given()
+                    .header("Authorization", setupLoginAndToken())
+                    .when()
+                    .get(memberOf)
+                    .then()
+                    .log().all()
+                    .extract().response();
+            Assert.assertEquals("[]", response.jsonPath().getString("description[]"));
+
+        }
+    }
+
+

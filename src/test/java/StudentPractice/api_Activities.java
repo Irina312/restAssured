@@ -62,4 +62,10 @@ public class api_Activities {
                 .assertThat()
                 .contentType(ContentType.JSON);
     }
+    @Test
+    public void verifyID() {
+        RestAssured.given()
+                .when()
+                .get();
+    }
 }

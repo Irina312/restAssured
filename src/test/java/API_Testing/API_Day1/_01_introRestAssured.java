@@ -65,14 +65,14 @@ When we verify the status codes we must pay attention to the following errors fr
     public void printResponse() {
         RestAssured.given() //RestAssured is a class which contains methods
                 .when()
-                .post("https://api.octoperf.com/public/users/login?password=Redmops364&username=iseclass@yahoo.com")
+                .post("https://api.octoperf.com/public/users/login?password=test123&username=iseclass@yahoo.com")
                 .prettyPeek(); // printsthe whole response body & headers
     }
     @Test
     public void prettyPrint() {
         RestAssured.given()
                 .when()
-                .post("https://api.octoperf.com/public/users/login?password=Redmops364&username=iseclass@yahoo.com")
+                .post("https://api.octoperf.com/public/users/login?password=test123&username=iseclass@yahoo.com")
                 .prettyPrint();
     }
 
@@ -82,7 +82,7 @@ When we verify the status codes we must pay attention to the following errors fr
     public void verifyStatusCode() {
         RestAssured.given()
                 .when()
-                .post("https://api.octoperf.com/public/users/login?password=Redmops364&username=iseclass@yahoo.com")
+                .post("https://api.octoperf.com/public/users/login?password=test123&username=iseclass@yahoo.com")
                 .then()
                 .assertThat()
                 .statusCode(200);
@@ -95,7 +95,7 @@ When we verify the status codes we must pay attention to the following errors fr
     public void verifyContentType() {
         RestAssured.given()
                 .when()
-                .post("https://api.octoperf.com/public/users/login?password=Redmops364&username=iseclass@yahoo.com")
+                .post("https://api.octoperf.com/public/users/login?password=test123&username=iseclass@yahoo.com")
                 .then()
                 .assertThat()
                 .contentType(ContentType.JSON);

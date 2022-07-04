@@ -55,7 +55,7 @@ public class _02_LoginTypes {
         String path = "/public/users/login";
          RestAssured.given()
                 .queryParam("username", "iseclass@yahoo.com")
-                .queryParam("password", "Redmops364")
+                .queryParam("password", "test123")
                 .when()
                 .post(path)
                 .then()

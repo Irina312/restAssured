@@ -16,7 +16,7 @@ public class _02_LoginTypes {
     public void testUsingQueryParams() {
         RestAssured.given()
                 .when()
-                .post("https://api.octoperf.com/public/users/login?password=Redmops364&username=iseclass@yahoo.com")
+                .post("https://api.octoperf.com/public/users/login?password=test123&username=iseclass@yahoo.com")
                 .then()
                 .assertThat()
                 .statusCode(200)
@@ -35,7 +35,7 @@ public class _02_LoginTypes {
         String path = "/public/users/login";
         Map<String, Object> map = new HashMap<String, Object>();
         map.put("username", "iseclass@yahoo.com");
-        map.put("password", "Redmops364");
+        map.put("password", "test123");
 
         RestAssured.given()
                 .queryParams(map)

@@ -142,5 +142,4 @@ public class api_Activities {
         Assert.assertEquals("[]", response.jsonPath().getString("description[]"));
         System.out.println(response.jsonPath().getString("description[1]")); // optional
     }
-
 }

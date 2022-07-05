@@ -7,6 +7,8 @@ import org.checkerframework.checker.units.qual.A;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
+import static org.apache.http.HttpStatus.SC_NO_CONTENT;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -42,8 +44,7 @@ public class E2E_Project {
                 .then()
                 .statusCode(SC_OK)  // the way to use interface to verify Status Code or .statusCode(200)
                 .extract() // methot that extracts JSON data
-                .body()  // Body extracts as JSON format
-                // instead of body(), can be cookies(), or headers()
+                .body()  // Body extracts as JSON format; instead of body(), can be cookies(), or headers()
                 .jsonPath() // navigates using jsonPath
                 .get("token"); // gets value for key Token
     }
@@ -61,6 +62,7 @@ public class E2E_Project {
 
         // The method verifies the Status Code
         Assert.assertEquals(SC_OK, response.statusCode());
+        // The method to verify the name
         Assert.assertEquals("Default", response.jsonPath().getString("name[0]"));
 
         // Save the ID in order to use it in other requests
@@ -72,11 +74,14 @@ public class E2E_Project {
         // What to use to store the data as Key & Value --> Map
         variables = new HashMap<>();
         variables.put("id", ID);
-        variables.put("userID", user_Id);
 
+        // TODO verify ID, userID, description
+        Assert.assertEquals("eqEOvH0Bp7hMViDsyIob", response.jsonPath().getString("id[0]"));
+        Assert.assertEquals("15kNvH0B9ik-roTyxShe", response.jsonPath().getString("userId[0]"));
+        Assert.assertEquals("", response.jsonPath().getString("description[0]"));
     }
 
-    @Test(dependsOnMethods = {"memberOf"})
+    @Test(dependsOnMethods = {"memberOf"}, description = "we need this method to be able to create the project")
     public void createProject() {
         String requestBody = "{\"id\":\"\",\"created\":\"2021-03-11T06:15:20.845Z\"," +
                 "\"lastModified\":\"2021-03-11T06:15:20.845Z\"," +
@@ -104,22 +109,24 @@ public class E2E_Project {
         // Using hamcrest Matchers validation
         assertThat(response.jsonPath().getString("name"), is("testing22"));
 
+        Assert.assertEquals(ID, response.jsonPath().getString("workspaceId"));
+        Assert.assertEquals(user_Id, response.jsonPath().getString("userId"));
+
         // Store id in a variable for future use
         projectID = response.jsonPath().get("id");
         System.out.println("New id created when creating a project " + projectID);
+   }
 
-//        Assert.assertEquals("id", response.jsonPath().getString("9smWxX0Bp7hMViDsqY5p"));
-//        Assert.assertEquals("userId", response.jsonPath().getString("ZpKWxX0BtLxR4BgeAONt"));
-//        Assert.assertEquals("description", response.jsonPath().getString("test  updated"));
-    }
     @Test(dependsOnMethods = {"memberOf", "createProject"})
-    public void updateProject(){
-        String requestBody1 = "{\"created\":1615443320845,\"description\":\"TLAUpate\"," +
+        public void updateProject(){
+
+        String requestBody1 = "{\"created\":1615443320845,\"description\":\"NewUpate\"," +
                 "\"id\":\"" + projectID + "\",\"lastModified\":1629860121757," +
-                "\"name\":\"tlaAccounting firm\",\"tags\":[],\"type\":\"DESIGN\"," +
+                "\"name\":\"TEST\",\"tags\":[],\"type\":\"DESIGN\"," +
                 "\"userId\":\"" + variables.get("userID") + "\"," +
                 "\"workspaceId\":\"" + variables.get("id") + "\"}";
 
+        // Get response
         response = RestAssured.given()
                 .headers("Content-type", "application/json")
                 .header("Authorization", setupLoginAndToken())
@@ -130,10 +137,34 @@ public class E2E_Project {
                 .then()
                 .extract()
                 .response();
+
+//       Another way to do it --> Create JSON body
+//        JSONObject body = new JSONObject();
+//        body.put("created", 1615443320845L);
+//        body.put("description", "TLAupdate");
+//        body.put("id", projectID);
+//        body.put("lastModified", 1656902579223L);
+//        body.put("name", "TLA accounting");
+//        body.put("type", "DESIGN");
+//        body.put("userId", variables.get("userId"));
+//        body.put("workspaceId", variables.get("id"));
+
         System.out.println(response.prettyPeek());
 
-        // TODO:
-        // add Assertions for id, name, userId, workspaceId, Status code, Content Type
+        // TODO: add Assertions for id, name, userId, workspaceId, Status code, Content Type
+        Assert.assertEquals("TEST", response.jsonPath().getString("name"));
+        Assert.assertEquals("ZpKWxX0BtLxR4BgeAONt", response.jsonPath().getString("userId"));
+        Assert.assertEquals("9smWxX0Bp7hMViDsqY5p", response.jsonPath().getString("workspaceId"));
+        Assert.assertEquals(SC_OK, response.statusCode());
+        Assert.assertEquals();
+        assertThat(response.jsonPath().getString("id"), is(projectID));
+        //assertThat(response.jsonPath().getString("name"), is(.get("name")));
+        //assertThat(response.jsonPath().getString("type"), is(body.get("type")));
+        assertThat(response.jsonPath().getString("userId"), is(user_Id));
+        assertThat(response.jsonPath().getString("workspaceId"), is(ID));
+        assertThat(response.statusCode(), is(SC_OK)); // Assert.assertEquals(SC_OK,200);
+        assertThat(response.contentType(), is(ContentType.JSON.toString()));
+
     }
 
     @Test(dependsOnMethods = {"memberOf", "createProject", "updateProject"})
@@ -141,13 +172,13 @@ public class E2E_Project {
         response = RestAssured.given()
                 .header("Authorization", setupLoginAndToken())
                 .when()
-                .delete("/design/projects" + projectID)
+                .delete("/design/projects/" + projectID)
                 .then()
                 .extract()
                 .response();
         // TODO: validate the Status code
-
-    }
+        Assert.assertEquals(SC_NO_CONTENT,204);
+        }
 
     }
 

@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="85c57a04-663b-4651-b085-4423b7d44880" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/API_Day2/_02_LoginTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/API_Day2/_02_LoginTypes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/API_Testing/API_Day1/_01_introRestAssured.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/API_Testing/API_Day1/_01_introRestAssured.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/StudentPractice/api_Activities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StudentPractice/api_Activities.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/workspaceRestAPI/E2E_Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/workspaceRestAPI/E2E_Project.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/workspaceRestAPI/E2E_Project.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/workspaceRestAPI/E2E_Project.class" afterDir="false" />
@@ -41,7 +39,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
-  <component name="RunManager" selected="TestNG.api_Activities">
+  <component name="RunManager" selected="TestNG.E2E_Project.verifyID">
     <configuration name="E2E_Project.createProject" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="restAssured" />
       <extension name="coverage">
@@ -114,17 +112,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="api_Activities" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="E2E_Project.verifyID" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="restAssured" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="StudentPractice.*" />
+          <option name="PATTERN" value="workspaceRestAPI.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="StudentPractice" />
-      <option name="MAIN_CLASS_NAME" value="StudentPractice.api_Activities" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PACKAGE_NAME" value="workspaceRestAPI" />
+      <option name="MAIN_CLASS_NAME" value="workspaceRestAPI.E2E_Project" />
+      <option name="METHOD_NAME" value="verifyID" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -133,11 +132,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.api_Activities" />
-        <item itemvalue="TestNG.E2E_Project.deleteProject" />
-        <item itemvalue="TestNG.E2E_Project.updateProject" />
-        <item itemvalue="TestNG.E2E_Project.createProject" />
+        <item itemvalue="TestNG.E2E_Project.verifyID" />
         <item itemvalue="TestNG.E2E_Project.memberOf" />
+        <item itemvalue="TestNG.E2E_Project.updateProject" />
+        <item itemvalue="TestNG.E2E_Project.deleteProject" />
+        <item itemvalue="TestNG.E2E_Project.createProject" />
       </list>
     </recent_temporary>
   </component>

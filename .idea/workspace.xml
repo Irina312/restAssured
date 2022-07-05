@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="85c57a04-663b-4651-b085-4423b7d44880" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/API_Day2/_02_LoginTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/API_Day2/_02_LoginTypes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/StudentPractice/api_Activities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StudentPractice/api_Activities.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/workspaceRestAPI/E2E_Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/workspaceRestAPI/E2E_Project.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/workspaceRestAPI/E2E_Project.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/workspaceRestAPI/E2E_Project.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +36,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
-  <component name="RunManager" selected="TestNG.E2E_Project.verifyID">
+  <component name="RunManager" selected="TestNG.E2E_Project.deleteProject">
     <configuration name="E2E_Project.createProject" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="restAssured" />
       <extension name="coverage">
@@ -132,10 +129,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.E2E_Project.deleteProject" />
         <item itemvalue="TestNG.E2E_Project.verifyID" />
         <item itemvalue="TestNG.E2E_Project.memberOf" />
         <item itemvalue="TestNG.E2E_Project.updateProject" />
-        <item itemvalue="TestNG.E2E_Project.deleteProject" />
         <item itemvalue="TestNG.E2E_Project.createProject" />
       </list>
     </recent_temporary>

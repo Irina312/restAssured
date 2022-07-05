@@ -76,8 +76,8 @@ public class E2E_Project {
         variables.put("id", ID);
 
         // TODO verify ID, userID, description
-        Assert.assertEquals("eqEOvH0Bp7hMViDsyIob", response.jsonPath().getString("id[0]"));
-        Assert.assertEquals("15kNvH0B9ik-roTyxShe", response.jsonPath().getString("userId[0]"));
+        Assert.assertEquals("9smWxX0Bp7hMViDsqY5p", response.jsonPath().getString("id[0]"));
+        Assert.assertEquals("ZpKWxX0BtLxR4BgeAONt", response.jsonPath().getString("userId[0]"));
         Assert.assertEquals("", response.jsonPath().getString("description[0]"));
     }
 
@@ -156,7 +156,7 @@ public class E2E_Project {
         Assert.assertEquals("ZpKWxX0BtLxR4BgeAONt", response.jsonPath().getString("userId"));
         Assert.assertEquals("9smWxX0Bp7hMViDsqY5p", response.jsonPath().getString("workspaceId"));
         Assert.assertEquals(SC_OK, response.statusCode());
-        Assert.assertEquals();
+
         assertThat(response.jsonPath().getString("id"), is(projectID));
         //assertThat(response.jsonPath().getString("name"), is(.get("name")));
         //assertThat(response.jsonPath().getString("type"), is(body.get("type")));
@@ -174,12 +174,13 @@ public class E2E_Project {
                 .when()
                 .delete("/design/projects/" + projectID)
                 .then()
+                .log().all()
                 .extract()
                 .response();
         // TODO: validate the Status code
         Assert.assertEquals(SC_NO_CONTENT,204);
+        // or assertThat(response.statusCode(), is(204));
         }
-
     }
 
 
